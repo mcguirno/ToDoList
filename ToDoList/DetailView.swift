@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    var passedValue: String
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         VStack {
@@ -16,7 +17,7 @@ struct DetailView: View {
                 .scaledToFit()
                 .foregroundStyle(.orange)
             
-            Text("You are a swifty legend!")
+            Text("You are a swifty legend!\nAnd you passed over the value \(passedValue)")
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
             
@@ -28,10 +29,9 @@ struct DetailView: View {
             .buttonStyle(.borderedProminent)
         }
         .padding()
-        .navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
-    DetailView()
+    DetailView(passedValue: "Item 1")
 }
