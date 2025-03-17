@@ -57,7 +57,6 @@ struct DetailView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Save") {
-                    //TODO: Add Save Code
                     toDo.item = item
                     toDo.reminderIsOn = reminderIsOn
                     toDo.dueDate = dueDate
